@@ -21,7 +21,7 @@ console.log(name1)
 
 
 
-숫자형 
+// 숫자형 
 
 const age= 30; // 숫자형 number
 const PI = 3.14;
