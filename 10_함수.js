@@ -26,26 +26,71 @@ showError();
 //결제등을 실패할 때마다 이렇게 입력해주면 편하다. 유지보수가 편하다. 
 //100군대에서 사용하고 있지만, 새로고침을 입력해주세요라고 하면 
 
-
 //매개 변수가 있는 함수
-function sayHello(name){
-    const msg = 'Hello, ${name}';
+function sayHi(name){
+    const msg = `Hello, ${name}`;
     console.log(msg);
 }
 
-sayHello('Mike');
-sayHello('tam');
+sayHi('Mike');
+sayHi('tam');
 
 
+//벡틱을 사용하여 표현 + 매개변수가 있는 함수
+// 함수 값에 따라서 달라지는 경우. 
 
 function sayHello(name){
-    console.log(name)
-    let msg = 'hello' ;
+    let message = 'hello';
     if(name){
-        msg += name;
+        message += `, ${name}`;
     }
-    console.log(msg);
+    console.log(message);
 }
 
 sayHello();
 sayHello('mike');
+
+
+
+//message는 지역변수다. 함수 안에서만 사용할 수 있는 변수다. 
+
+//message를 함수 밖엥서도 사용하고 싶다면. 
+
+
+let tiktok  = 'hi';
+
+function tickhi(name){
+    if(name){
+        tiktok += `, ${name}`;
+    }
+    console.log(tiktok);
+
+
+}
+
+
+tickhi('minky');
+console.log(tiktok);
+
+//함수 밖에 있는 변수가 함수를 거치면서 바뀌게 됨. 
+
+
+console.log('------- 전역 변수와 지역변수--------' );
+
+
+let msg= "welcome";
+console.log(msg)
+
+
+function sayho(name){
+    let msg = "hello"
+    console.log(msg + ' ' + name);
+}
+
+sayho('mike');
+
+//전역 변수가 함수 안에서 지역변수로 활동하고, 
+
+console.log(msg)
+
+//다시 그 변수를 호출하면 변화하지 않고 등장한다. 
