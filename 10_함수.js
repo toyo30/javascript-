@@ -94,3 +94,67 @@ sayho('mike');
 console.log(msg)
 
 //다시 그 변수를 호출하면 변화하지 않고 등장한다. 
+
+
+
+let nick = "Mike";
+
+function adult(nick){
+    console.log(nick)
+
+}
+
+
+adult();
+adult('jame');
+
+//전역변수를 매개변수로 하면 함수의 지역변수가 된다. 겹치지 않게 해야 한다. 
+//전역 변수가 많아지면 관리가 힘들어진다. 
+
+
+//or
+
+function sayhellow(name){
+    let newName = name ||'friend';
+    let ha = `go, ${newName}`
+    console.log(ha)
+}
+
+sayhellow();//매개 변수가 없으면 언디파인드가 들어가기 때문에 false가 나오게 되고, or은 마지막을 반환하기 때문에 freind를 반환한다.
+sayhellow('jane');
+
+//default value
+
+function sayhoho(name='frend'){
+    let msg = `hello, ${name}`
+    console.log(msg)
+}
+
+sayhoho();//변수에 기본값을 입력해 넣어서 네임이 없을 때, 할당됨
+sayhoho('jane');
+
+
+//return 으로 값 변환
+
+function add(num1, num2){
+    return num1 + num2;
+}
+
+//압에 리턴을 주면 리턴 오른쪽에 있는 값을 반환함. 
+
+const result = add(2,3); //두 개를 입력해주면 더한다음에 반환해줌. 반환에서 result에 저장해줌
+console.log(result)
+
+
+//return이 없어도 반환해줌. 
+
+function showError(){
+    alert('에러가 발생했습니다.');
+    return;
+    //언디파인드를 반환함. 
+}
+
+const result1 = showError();
+console.log(result1);
+
+//종료됨 
