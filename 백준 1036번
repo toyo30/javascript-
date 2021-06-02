@@ -1,0 +1,28 @@
+
+let N = Math.floor(Math.random() * 1000 + 1);
+
+
+
+let list =[];
+
+
+for(let i = 1; i <=N; i++){
+  if(i < 100){
+    list.push(i);
+  }
+  else{
+    let cp =[];
+    for(let j =0; j <String(i).length; j++){
+      nrr = Number(String[j+1])-Number(String[j]);
+      cp.push(nrr);
+    }
+    if(cp.indexOf(cp[j])=== -1)
+      if( length.cp ===1){
+        list.push(i);
+      }
+  }
+  
+  
+  let listString = String.list;
+  
+  console.log(list.length);
