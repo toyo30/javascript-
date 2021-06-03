@@ -1,0 +1,34 @@
+let N = Math.floor(Math.random() * 70 + 1);
+
+console.log(N);
+
+let b =[];
+
+b.push(N);
+
+console.log(b);
+
+for(let i = 1; i <= N; i++){
+  if( i < 100){
+  b.push(i);
+ }
+  else(i >=100){
+    let blank =[];
+    let d = String(i);
+    for(let j= 0; j < d.length; j++){
+      let f=0;
+      let first=0;
+      first +=Number(d[1])-Number(d[0]);
+      f += Number(d[j+1])-Number(d[j]);
+      blank.push(f);
+      
+      let no_duple = blank.filter((element, index) => {
+      return blank.indexOf(element) === index;});
+      console.log("-------");
+      console.log(blank);
+      console.log(no_duple);
+      if(first = no_duple[0]){
+      console.log("됐다")
+      }
+    }
+}
