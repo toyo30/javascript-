@@ -1,0 +1,25 @@
+let i = 123;
+let d = String(i);
+let blank = [];
+
+for(let j= 0; j < d.length -1; j++){
+  let f=0;
+  let first=0;
+   first +=Number(d[1])-Number(d[0]);
+   f += Number(d[j+1])-Number(d[j]);
+   blank.push(f);
+  
+  let no_duple = blank.filter((element, index) => {
+    return blank.indexOf(element) === index;
+});
+  console.log("-------");
+  console.log(blank);
+  console.log(no_duple);
+  if(first = no_duple[0]){
+    console.log("됐다")
+  }
+}
+
+
+
+
