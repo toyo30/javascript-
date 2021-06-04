@@ -1,0 +1,8 @@
+for(let i = 1; i < 10; i++){
+  if(i < 100){
+    console.log(i + "100이하");
+  }
+  else if(i >=100){
+    console.log("100이상");
+  }
+}
