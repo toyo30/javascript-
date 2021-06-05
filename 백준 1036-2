@@ -1,0 +1,16 @@
+let N = 131;
+let b = [];
+
+for(let i = 1; i <= N; i++){
+  if(i < 100){
+  b.push(i);
+ }
+  else if(i >=100){
+  let d = String(i);
+  let blank =[];
+  let first =[];
+  for(let j= 0; j < d.length - 1; j++){
+    let blank =[];
+}
+}  
+console.log(b);
